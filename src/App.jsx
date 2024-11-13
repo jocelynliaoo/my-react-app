@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Square({ value }) {
+function Square() {
 
   const [value, setValue] = useState(null);
 
@@ -19,6 +19,7 @@ function Square({ value }) {
 }
 
 export default function Board() {
+  const [squares, setSquares] = useState(Array(9).fill(null));
   return (
     <>
       <div className="board-row">
